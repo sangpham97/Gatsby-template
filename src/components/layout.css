@@ -6,3 +6,21 @@
   font-size: 1.2rem;
   color: white !important;
 }
+.default_background {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: cover;
+}
+
+.about-background {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-size: cover;
+  flex-direction: column;
+}
