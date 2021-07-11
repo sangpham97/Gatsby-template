@@ -24,3 +24,6 @@
   background-size: cover;
   flex-direction: column;
 }
+.contact-page {
+  height: 100%;
+}
