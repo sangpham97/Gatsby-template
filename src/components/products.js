@@ -47,7 +47,8 @@ const Products = () => {
         </div>
         <div className="row justify-content-center align-items-center g-3">
           {filteredData.map(product => {
-            const { price, title, id } = product
+            const { price, title } = product
+
             return (
               <div className="col-10 col-md-6 col-sm-8 col-lg-3">
                 <article className="card border-1 border-secondary">
@@ -60,7 +61,7 @@ const Products = () => {
                     <div className="justify-content-center align-items-center ">
                       <button
                         className="btn btn-outline-success my-2 d-block snipcart-add-item"
-                        data-item-id={id}
+                        data-item-id={product.image.id}
                         data-item-name={title}
                         data-item-price={price}
                         data-item-image={product.image.fixed.src}
