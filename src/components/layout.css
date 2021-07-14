@@ -27,3 +27,8 @@
 .contact-page {
   height: 100%;
 }
+.cart {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}

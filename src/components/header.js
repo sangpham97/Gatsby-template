@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "../images/gatsby-icon.png"
+import { FaCartArrowDown } from "react-icons/fa"
 import { Link } from "gatsby"
 import { NavList } from "./contrast/links"
 const Header = () => (
@@ -22,6 +23,7 @@ const Header = () => (
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="mx-auto"></div>
         <NavList />
+        <FaCartArrowDown className="text-primary cart  snipcart-checkout" />
       </div>
     </div>
   </nav>

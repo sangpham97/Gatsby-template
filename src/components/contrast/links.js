@@ -20,7 +20,7 @@ export const links = [
 
 export const NavList = () => {
   return (
-    <ul className="navbar-nav  mb-2 mx-md-2 text-uppercase" key={links.id}>
+    <ul className="navbar-nav px-sm-4 mx-md-2 text-uppercase" key={links.id}>
       {links.map(item => {
         const { id, name, link } = item
         return <NavLink id={id} name={name} link={link} />

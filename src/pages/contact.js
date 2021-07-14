@@ -12,7 +12,23 @@ export default function Contact() {
       <div className="container ">
         <div className="row">
           <div className="col-10 col-md-8 col-lg-6 mx-auto">
-            <form className="form-group mb-5">
+            <form
+              className="form-group mb-5"
+              action="https://formspree.io/f/xeqvlglz"
+              method="POST"
+            >
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="name"
+                  placeholder="Name"
+                  name="name"
+                />
+              </div>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
                   Email address
@@ -22,24 +38,22 @@ export default function Contact() {
                   className="form-control"
                   id="email"
                   aria-describedby="email"
-                  placeholder="email"
+                  placeholder="Email"
+                  name="_replyto"
                 />
                 <div id="emailHelp" className="form-text">
                   We'll never share your email with anyone else.
                 </div>
               </div>
-              <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="password"
-                  placeholder="Password"
-                />
-              </div>
-
+              <div className="lead text-dark">Leave a comment</div>
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Enter your feeling about our services"
+                required=""
+                className="d-block w-100 my-3"
+              ></textarea>
               <button type="submit" className="btn btn-primary">
                 Submit
               </button>
