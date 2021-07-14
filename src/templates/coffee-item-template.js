@@ -48,7 +48,7 @@ export const query = graphql`
       image {
         title
         fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
       }
       title

@@ -34,13 +34,13 @@ const Products = () => {
           {products.map(product => {
             const { price, title } = product
             return (
-              <div className="col-10 col-md-6 col-sm-8 col-lg-4 ">
+              <div className="col-10 col-md-6 col-sm-8 col-lg-4">
                 <article className="card my-3 border-1 border-secondary ">
                   <div className="card-image-top">
                     <Image fixed={product.image.fixed} className=" w-100" />
                   </div>
                   <h5 className="card-body d-flex justify-content-between mx-2">
-                    <div className="card-title">{title}</div>
+                    <div className="card-title display-10">{title}</div>
                     <div className="card-text text-warning">${price}</div>
                   </h5>
                   <div className="justify-content-center align-items-center d-flex">
