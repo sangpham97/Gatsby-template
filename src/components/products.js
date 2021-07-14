@@ -8,7 +8,7 @@ export const query = graphql`
       nodes {
         image {
           fixed(height: 300) {
-            ...GatsbyContentfulFixed_tracedSVG
+            ...GatsbyContentfulFixed
           }
           id
           title
