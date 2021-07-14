@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -17,7 +16,7 @@ const IndexPage = ({ data }) => {
   ]
 
   const [menuItems, setMenuItems] = useState(data.menu.nodes)
-  const [categories, setCategories] = useState(allCategories)
+  const [categories] = useState(allCategories)
   console.log(menuItems)
   const filterItems = category => {
     if (category === "All") {
@@ -39,7 +38,7 @@ const IndexPage = ({ data }) => {
       ></BackgroundSection>
       <Info />
       <Category categories={categories} filterItems={filterItems} />
-      <Menu items={menuItems} />
+      <Menu items={menuItems} key={menuItems.id} />
       <Product />
     </Layout>
   )
@@ -66,7 +65,7 @@ export const query = graphql`
         }
         image {
           title
-          fixed(height: 100, width: 100) {
+          fixed(height: 100, width: 200) {
             ...GatsbyContentfulFixed_tracedSVG
           }
         }

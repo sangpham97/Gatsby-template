@@ -7,11 +7,12 @@ export default function Contact() {
   return (
     <Layout>
       <Seo title="Contact" />
+      <div className="my-5"></div>
       <Title title="contact us " />
-      <div className="container">
+      <div className="container ">
         <div className="row">
           <div className="col-10 col-md-8 col-lg-6 mx-auto">
-            <form className="form-group">
+            <form className="form-group mb-5">
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
                   Email address

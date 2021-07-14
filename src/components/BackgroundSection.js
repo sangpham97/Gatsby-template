@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 const BackgroundSection = ({ title, img, children, styleClass }) => {
   return (
