@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Title from "./Title"
 import Image from "gatsby-image"
+import SearchBar from "./SearchBar"
+
 export const query = graphql`
   {
     items: allContentfulCoffeProduct {
@@ -25,13 +27,25 @@ const Products = () => {
   const {
     items: { nodes: products },
   } = data
+  const [filteredData, setFilteredData] = useState(products)
+  const [wordEntered, setWordEntered] = useState("")
 
   return (
     <section className="py-5 ">
       <Title title="Our Products"></Title>
       <div className="container">
+        <div className="row my-4">
+          <div className="col-10 col-md-8 col-lg-6 mx-auto">
+            <SearchBar
+              products={products}
+              setFilteredData={setFilteredData}
+              wordEntered={wordEntered}
+              setWordEntered={setWordEntered}
+            />
+          </div>
+        </div>
         <div className="row justify-content-center align-items-center">
-          {products.map(product => {
+          {filteredData.map(product => {
             const { price, title } = product
             return (
               <div className="col-10 col-md-6 col-sm-8 col-lg-4">
@@ -39,15 +53,15 @@ const Products = () => {
                   <div className="card-image-top">
                     <Image fixed={product.image.fixed} className=" w-100" />
                   </div>
-                  <h5 className="card-body d-flex justify-content-between mx-2">
+                  <h5 className="card-body">
                     <div className="card-title display-10">{title}</div>
                     <div className="card-text text-warning">${price}</div>
+                    <div className="justify-content-center align-items-center ">
+                      <div className="btn btn-outline-success my-2 d-block">
+                        Add to Cart
+                      </div>
+                    </div>
                   </h5>
-                  <div className="justify-content-center align-items-center d-flex">
-                    <span className="btn btn-outline-success my-2">
-                      Add to Cart
-                    </span>
-                  </div>
                 </article>
               </div>
             )

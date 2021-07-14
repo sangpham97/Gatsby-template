@@ -7,6 +7,7 @@ import PageMark from "../components/posts-layout"
 
 const About = ({ data }) => {
   const markDown = data.allMarkdownRemark.nodes
+
   console.log(markDown)
 
   return (
