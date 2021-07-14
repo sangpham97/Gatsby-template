@@ -58,7 +58,7 @@ const Products = () => {
                     <div className="card-title ">{title}</div>
                     <div className="card-text text-danger lead">${price}</div>
                     <div className="justify-content-center align-items-center ">
-                      <div
+                      <button
                         className="btn btn-outline-success my-2 d-block snipcart-add-item"
                         data-item-id={id}
                         data-item-name={title}
@@ -67,7 +67,7 @@ const Products = () => {
                         data-item-url="https://gatsby-project-contentful.netlify.app"
                       >
                         Add to Cart
-                      </div>
+                      </button>
                     </div>
                   </h5>
                 </article>
