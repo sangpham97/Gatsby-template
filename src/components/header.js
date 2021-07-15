@@ -3,6 +3,8 @@ import logo from "../images/gatsby-icon.png"
 import { FaCartArrowDown } from "react-icons/fa"
 import { Link } from "gatsby"
 import { NavList } from "./contrast/links"
+import Auth0 from "./Auth0"
+
 const Header = () => (
   <nav className="navbar navbar-expand-sm navbar-dark  bg-dark">
     <div className="container">
@@ -23,7 +25,8 @@ const Header = () => (
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="mx-auto"></div>
         <NavList />
-        <FaCartArrowDown className="text-primary cart  snipcart-checkout" />
+        <FaCartArrowDown className="text-primary cart  snipcart-checkout mx-4" />
+        <Auth0 />
       </div>
     </div>
   </nav>

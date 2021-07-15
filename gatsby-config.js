@@ -64,6 +64,18 @@ module.exports = {
         autopop: true,
       },
     },
+    {
+      resolve: "gatsby-theme-auth0",
+      options: {
+        domain: process.env.AUTH0_DOMAIN,
+        clientID: process.env.AUTH0_CLIENT_ID,
+        redirectUri: process.env.AUTH0_CALLBACK_URL,
+        // audience: process.env.AUTH0_AUDIENCE, // Optional
+        // responseType: process.env.AUTH0_RESPONSE_TYPE, // Optional
+        // scope: process.env.AUTH0_SCOPE, // Optional
+        // callbackPath: "/auth/callback", // Optional
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
