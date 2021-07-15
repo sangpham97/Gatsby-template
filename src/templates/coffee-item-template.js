@@ -25,7 +25,7 @@ function CoffeItem({ data }) {
                 className="img-fluid"
               ></Image>
             </div>
-            <div className="col-10 col-md-6 col-lg-7">
+            <div className="col-10 col-md-6 col-lg-5">
               <h4 className="display-md-5 mt-2">Details:</h4>
               <p className="lead text-md-muted text-center text-md-start">
                 {description}
